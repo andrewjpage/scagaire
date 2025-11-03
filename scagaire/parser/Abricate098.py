@@ -1,3 +1,10 @@
+"""
+Abricate098 - Parser for Abricate version 0.9.8+ output
+
+Parses AMR gene predictions from Abricate version 0.9.8 and later.
+This format includes STRAND and RESISTANCE fields compared to 0.9.7.
+"""
+
 import csv
 import re
 import os
@@ -6,6 +13,12 @@ from scagaire.AbricateResult098 import AbricateResult098
 from scagaire.parser.AmrParser import AmrParser
 
 class Abricate098(AmrParser):
+    """
+    Parser for Abricate 0.9.8+ format.
+    
+    Expected columns include STRAND and RESISTANCE fields.
+    See AbricateResult098 for full column list.
+    """
     def __init__(self, input_file, verbose):
         self.input_file = input_file
         self.verbose = verbose
