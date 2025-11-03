@@ -81,7 +81,7 @@ class Scagaire:
             if self.output_file is not None and os.path.exists(self.output_file):
                 os.remove(self.output_file)
             if self.summary_file is not None and os.path.exists(self.summary_file):
-                os.remove(self.output_file)
+                os.remove(self.summary_file)
         else:
             # Exit with error if files exist and overwrite is disabled
             if self.output_file is not None and os.path.exists(self.output_file):
