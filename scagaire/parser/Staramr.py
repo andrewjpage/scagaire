@@ -1,3 +1,10 @@
+"""
+Staramr - Parser for StarAMR output
+
+Parses AMR gene predictions from StarAMR tool which uses
+the ResFinder database for resistance gene detection.
+"""
+
 import csv
 import re
 import os
@@ -6,6 +13,11 @@ from scagaire.StaramrResult import StaramrResult
 from scagaire.parser.AmrParser import AmrParser
 
 class Staramr(AmrParser):
+    """
+    Parser for StarAMR (ResFinder) format.
+    
+    Parses ResFinder results from StarAMR tool.
+    """
     def __init__(self, input_file, verbose):
         self.input_file = input_file
         self.verbose = verbose

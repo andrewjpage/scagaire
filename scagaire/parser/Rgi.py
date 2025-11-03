@@ -1,3 +1,10 @@
+"""
+Rgi - Parser for RGI (CARD) output
+
+Parses AMR gene predictions from RGI (Resistance Gene Identifier)
+which uses the CARD (Comprehensive Antibiotic Resistance Database).
+"""
+
 import csv
 import re
 import os
@@ -6,6 +13,12 @@ from scagaire.RgiResult import RgiResult
 from scagaire.parser.AmrParser import AmrParser
 
 class Rgi(AmrParser):
+    """
+    Parser for RGI (CARD) format.
+    
+    Parses comprehensive CARD database output including resistance
+    mechanisms, drug classes, and ARO accessions.
+    """
     def __init__(self, input_file, verbose):
         self.input_file = input_file
         self.verbose = verbose
